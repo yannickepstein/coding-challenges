@@ -1,0 +1,8 @@
+# 2Sum Scalable
+
+For some list of numbers nums and a target t, decide if there is a pair of integers in nums that sum to target.
+
+Have sorted buckets [X0, Y0), [X1, Y1), ... that fit into memory.
+Go over the buckets. For some bucket [A, B) load a bucket [target-B, target-A+1) into memory -> Note will be at most |B - A| integers (so still bound by the size of the bucket).
+Then run 2Sum on this subproblem.
+~
